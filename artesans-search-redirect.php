@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Artesans Search Redirect
- * Plugin URI: https://www.artesans.eu
+ * Plugin URI: https://github.com/Artesans/Artesans-Search-Redirect
  * Description: Simple search redirection plugin. Allows to select some search terms that can be redirected to a custom url.
  * Text Domain: artesans-plugin-redirect
  * Author: Artesans

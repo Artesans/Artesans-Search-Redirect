@@ -1,7 +1,7 @@
 <?php
 /*
 	Plugin Name: Arteans Search Redirect
-	Plugin URI: http://artesans.eu
+	Plugin URI: https://www.artesans.eu
 	Description: Simple search redirection plugin. Allows to select some search terms that can be redirected to a custom url.
 	Text Domain: artesans-plugin-redirect
 	Author: Artesans
@@ -9,24 +9,6 @@
 	Version: 1.0.1
 	Tested up to: 4.9.8
 	License: GPLv2 or later
-
-	Plugin template:
-
-	Copyright 2014 Never Settle (email : dev@neversettle.it)
-	
-	This program is free software; you can redistribute it and/or
-	modify it under the terms of the GNU General Public License
-	as published by the Free Software Foundation; either version 2
-	of the License, or (at your option) any later version.
-	
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -34,22 +16,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // TODO: rename this class
-class NS_Plugin {
+class Artesans_Search_Redirect {
 	
 	var $path; 				// path to plugin dir
 	var $wp_plugin_page; 	// url to plugin page on wp.org
-	var $ns_plugin_page; 	// url to pro plugin page on ns.it
-	var $ns_plugin_name; 	// friendly name of this plugin for re-use throughout
-	var $ns_plugin_menu; 	// friendly menu title for re-use throughout
-	var $ns_plugin_slug; 	// slug name of this plugin for re-use throughout
-	var $ns_plugin_ref; 	// reference name of the plugin for re-use throughout
+	var $artesans_plugin_page; 	// url to pro plugin page on ns.it
+	var $artesans_plugin_name; 	// friendly name of this plugin for re-use throughout
+	var $artesans_plugin_menu; 	// friendly menu title for re-use throughout
+	var $artesans_plugin_slug; 	// slug name of this plugin for re-use throughout
+	var $artesans_plugin_ref; 	// reference name of the plugin for re-use throughout
 	
 	function __construct(){		
 		$this->path = plugin_dir_path( __FILE__ );
 		// TODO: update to actual
-		$this->wp_plugin_page = "http://www.artesans.eu";
+		$this->wp_plugin_page = "https://www.artesans.eu";
 		// TODO: update to link builder generated URL or other public page or redirect
-		$this->ns_plugin_page = "http://www.artesans.eu";
+		$this->ns_plugin_page = "https://www.artesans.eu";
 		// TODO: update this - used throughout plugin code and only have to update here
 		$this->ns_plugin_name = "Artesans search redirect";
 		// TODO: update this - used throughout plugin code and only have to update here
@@ -172,7 +154,7 @@ class NS_Plugin {
 
 					<?php do_settings_sections($this->ns_plugin_ref); ?>
 					<p><?php echo __('Add terms in the left box, separated by comma. Do NOT write spaces before and after every comma. 
-					Every time a user do a search in each term or expression, the user will be redirected to the url address on the right. 
+					Every time a user do a search in each term or expression from the left box, will be redirected to the url address on the right. 
 					Accents, case and special characters will be ignored. Enjoy it!',$this->ns_plugin_slug );?></p>
 
 					<?php submit_button(); ?>
@@ -310,7 +292,7 @@ class NS_Plugin {
 	
 }
 
-new NS_Plugin();
+new Artesans_Search_Redirect();
 
 
 

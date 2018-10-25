@@ -156,9 +156,9 @@
 
 	.artesans-logo svg {
 		display:block;
-		margin:30px auto;
-		width:225px;
-		height:79px;
+		margin:30px 0;
+		width:150px;
+		height:53px;
 	}
 
 	.artesans-logo svg .artesans-lettering path {
@@ -166,9 +166,9 @@
 	}
 
 	.artesans-urls {
-		width:220px;
-		margin:30px auto;
-		text-align:left;;
+		min-width:220px;
+		margin:30px 0;
+		text-align:left;
 	}
 
 	.redir-row {
